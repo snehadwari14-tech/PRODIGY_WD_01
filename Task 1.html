@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Think What</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  transition: background 0.3s, box-shadow 0.3s;
+  z-index: 1000;
+}
+
+nav.scrolled {
+  background: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: white;
+  color: #333;
+}
+
+/* Sections */
+section {
+  height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#home { background: #f4a261; color: #fff; }
+#about { background: #2a9d8f; color: #fff; }
+#services { background: #e9c46a; color: #333; }
+#contact { background: #264653; color: white; }
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+p {
+  max-width: 700px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* Contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background: #f4a261;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #e76f51;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>  <!-- Home Section -->  <section id="home">
+    <h1>Welcome to Think What</h1>
+    <p>Discover a new way of building beautiful, functional websites with creative and dynamic elements.</p>
+  </section>  <!-- About Section -->  <section id="about">
+    <h2>About Us</h2>
+    <p>Think What is dedicated to crafting modern, innovative, and responsive web experiences. We combine creativity with technology to deliver impactful solutions that engage users and inspire growth.</p>
+    <p>We are a team of passionate creators dedicated to bringing your digital ideas to life. Our focus is on clean design and user-centric experiences. With a background in web development, design, and branding, we approach every project with creativity and precision. Our collaborative process ensures that your vision is not only realized but elevated — transforming concepts into exceptional digital products.</p>
+  </section>  <!-- Services Section -->  <section id="services">
+    <h2>Our Services</h2>
+    <p>We provide a wide range of services including:</p>
+    <ul style="text-align:left; max-width:600px;">
+      <li>✅ Website Design & Development</li>
+      <li>✅ Interactive User Interfaces</li>
+      <li>✅ Responsive & Mobile-First Solutions</li>
+      <li>✅ Creative Branding and Digital Strategy</li>
+    </ul>
+  </section>  <!-- Contact Section -->  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have a project in mind? We'd love to hear from you.<br>
+       Reach out via email, phone, or our contact form.</p>
+    <p><strong>Phone:</strong> +91 1234567890</p>
+    <p><strong>Email:</strong> <a href="mailto:thinkwhat123@gmail.com" style="color:#f4a261;">thinkwhat123@gmail.com</a></p><form>
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <textarea rows="5" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+  </section>  <script>
+    // Change navbar style on scroll
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script></body>
+</html>
